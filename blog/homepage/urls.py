@@ -5,8 +5,9 @@ app_name = 'homepage'
 
 urlpatterns = [
     # post views
+    path('index/', views.index, name = 'index'),
     path('', views.wall_list, name='wall_list'),
-    # path('<int:year>/<int:month>/<int:day>/<slug:post>/',
-    #      views.post_detail,
-    #      name='post_detail'),
+
+    path('<int:publisher_id>/',
+         views.wall_detail, name='wall_detail'),
 ]
